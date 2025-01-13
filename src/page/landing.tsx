@@ -1,6 +1,7 @@
 import { UserButton } from "@civic/auth/react";
 
 export function TitleBar() {
+
     return (
       <div
         style={{
