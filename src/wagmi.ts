@@ -1,15 +1,14 @@
-// import { mainnet, sepolia } from "wagmi/chains";
-// import { embeddedWallet } from "@civic/auth-web3";
-// import { createConfig, http } from "wagmi";
+import { createConfig, http } from 'wagmi';
+import { mainnet, sepolia } from "wagmi/chains";
+import { embeddedWallet } from "@civic/auth-web3";
 
-// const wagmiConfig = createConfig({
-//     chains: [ mainnet, sepolia ],
-//     transports: {
-//       [mainnet.id]: http(),
-//       [sepolia.id]: http(),
-//     },
-//     connectors: [
-//       embeddedWallet(),
-//     ],
-//   });
-  
+export const wagmiConfig = createConfig({
+  chains: [mainnet, sepolia],
+  transports: {
+    [mainnet.id]: http(),
+    [sepolia.id]: http(),
+  },
+  connectors: [
+    embeddedWallet(),
+  ],
+});
